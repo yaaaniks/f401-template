@@ -6,6 +6,7 @@ MCU=STM32F401xx
 
 INCLUDE_DIR=./inc
 SOURCE_DIR=./src
+CORE_DIR=./core
 CMSIS_DIR=./cmsis
 CPU_DIR=./cpu
 BUILD_DIR=build
@@ -14,6 +15,7 @@ BUILD_DIR=build
 OPT=-O3 -g0 -flto
 SRC=$(SOURCE_DIR)/main.c 
 SRC+=$(SOURCE_DIR)/system_stm32f4xx.c
+SRC+=$(CORE_DIR)/timer.c
 ###################################################
 
 CSTANDARD = -std=c11
@@ -31,7 +33,7 @@ STARTUP_SCRIPT = $(CPU_DIR)/startup_stm32f401xc.s
 ###################################################
 
 # vpath %.a ./cpu
-VPATH +=$(SOURCE_DIR) $(CPU_DIR)
+VPATH +=$(SOURCE_DIR) $(CPU_DIR) $(CORE_DIR)
 
 CC=arm-none-eabi-gcc
 GDB=arm-none-eabi-gdb
@@ -41,11 +43,12 @@ SIZE=arm-none-eabi-size
 
 
 CFLAGS  = -Wall -g $(CSTANDARD) -Os $(OPT)
-CFLAGS += -mlittle-endian -mcpu=cortex-m4  -march=armv7e-m -mthumb
+CFLAGS += -mlittle-endian -mcpu=cortex-m4 -march=armv7e-m -mthumb
 CFLAGS += -mfpu=fpv4-sp-d16 -mfloat-abi=hard
 CFLAGS += -ffunction-sections -fdata-sections
 CFLAGS += -D $(MCU)
 CFLAGS += -I$(INCLUDE_DIR)
+CFLAGS += -I$(CORE_DIR)
 CFLAGS += -I$(SOURCE_DIR)
 CFLAGS += -I$(CMSIS)
 CFLAGS += -I$(CORE)
@@ -59,6 +62,7 @@ ROOT=$(shell pwd)
 
 OBJS = $(addprefix $(BUILD_DIR)/objs/,$(SRC:.c=.o))
 DEPS = $(addprefix $(BUILD_DIR)/deps/,$(SRC:.c=.d))
+
 
 ###################################################
 

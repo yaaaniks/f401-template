@@ -4,9 +4,9 @@ build/main.elf:     file format elf32-littlearm
 SYMBOL TABLE:
 08000000 l    d  .isr_vector	00000000 .isr_vector
 08000194 l    d  .text	00000000 .text
-080003d8 l    d  .rodata	00000000 .rodata
-080003dc l    d  .init_array	00000000 .init_array
-080003e4 l    d  .fini_array	00000000 .fini_array
+080003dc l    d  .rodata	00000000 .rodata
+080003e0 l    d  .init_array	00000000 .init_array
+080003e8 l    d  .fini_array	00000000 .fini_array
 20000000 l    d  .data	00000000 .data
 20000430 l    d  .bss	00000000 .bss
 2000044c l    d  ._user_heap_stack	00000000 ._user_heap_stack
@@ -20,132 +20,132 @@ SYMBOL TABLE:
 00000000 l    d  .debug_str	00000000 .debug_str
 00000000 l    d  .debug_frame	00000000 .debug_frame
 00000000 l    d  .debug_ranges	00000000 .debug_ranges
-00000000 l    df *ABS*	00000000 ccI3NcH6.o
-08000368 l       .text	00000000 LoopCopyDataInit
-08000360 l       .text	00000000 CopyDataInit
-0800037c l       .text	00000000 LoopFillZerobss
-08000376 l       .text	00000000 FillZerobss
-080003a8 l       .text	00000000 Infinite_Loop
+00000000 l    df *ABS*	00000000 ccaW9Ko7.o
+0800036c l       .text	00000000 LoopCopyDataInit
+08000364 l       .text	00000000 CopyDataInit
+08000380 l       .text	00000000 LoopFillZerobss
+0800037a l       .text	00000000 FillZerobss
+080003ac l       .text	00000000 Infinite_Loop
 00000000 l    df *ABS*	00000000 crtstuff.c
-080003c0 l     O .text	00000000 __EH_FRAME_BEGIN__
+080003c4 l     O .text	00000000 __EH_FRAME_BEGIN__
 08000194 l     F .text	00000000 deregister_tm_clones
 080001b0 l     F .text	00000000 register_tm_clones
 080001d4 l     F .text	00000000 __do_global_dtors_aux
 20000430 l       .bss	00000001 completed.1
-080003e4 l     O .fini_array	00000000 __do_global_dtors_aux_fini_array_entry
+080003e8 l     O .fini_array	00000000 __do_global_dtors_aux_fini_array_entry
 080001fc l     F .text	00000000 frame_dummy
 20000434 l       .bss	00000018 object.0
-080003e0 l     O .init_array	00000000 __frame_dummy_init_array_entry
+080003e4 l     O .init_array	00000000 __frame_dummy_init_array_entry
 00000000 l    df *ABS*	00000000 atexit.c
 00000000 l    df *ABS*	00000000 fini.c
 00000000 l    df *ABS*	00000000 init.c
 00000000 l    df *ABS*	00000000 __atexit.c
 00000000 l    df *ABS*	00000000 
 00000000 l    df *ABS*	00000000 __call_atexit.c
-080003ac l     F .text	00000014 register_fini
+080003b0 l     F .text	00000014 register_fini
 00000000 l    df *ABS*	00000000 crti.o
 00000000 l    df *ABS*	00000000 crtn.o
 00000000 l    df *ABS*	00000000 impure.c
 20000008 l     O .data	00000428 impure_data
 00000000 l    df *ABS*	00000000 
-080003e8 l       .fini_array	00000000 __fini_array_end
-080003e4 l       .fini_array	00000000 __fini_array_start
-080003e4 l       .init_array	00000000 __init_array_end
-080003dc l       .init_array	00000000 __preinit_array_end
-080003dc l       .init_array	00000000 __init_array_start
-080003dc l       .init_array	00000000 __preinit_array_start
-080003a8  w    F .text	00000002 RTC_Alarm_IRQHandler
-080003a8  w    F .text	00000002 EXTI2_IRQHandler
-080003a8  w    F .text	00000002 DebugMon_Handler
-080003a8  w    F .text	00000002 SPI4_IRQHandler
-080003a8  w    F .text	00000002 TIM1_CC_IRQHandler
-080003a8  w    F .text	00000002 DMA2_Stream5_IRQHandler
-080003a8  w    F .text	00000002 HardFault_Handler
-080003a8  w    F .text	00000002 DMA1_Stream5_IRQHandler
+080003ec l       .fini_array	00000000 __fini_array_end
+080003e8 l       .fini_array	00000000 __fini_array_start
+080003e8 l       .init_array	00000000 __init_array_end
+080003e0 l       .init_array	00000000 __preinit_array_end
+080003e0 l       .init_array	00000000 __init_array_start
+080003e0 l       .init_array	00000000 __preinit_array_start
+080003ac  w    F .text	00000002 RTC_Alarm_IRQHandler
+080003ac  w    F .text	00000002 EXTI2_IRQHandler
+080003ac  w    F .text	00000002 DebugMon_Handler
+080003ac  w    F .text	00000002 SPI4_IRQHandler
+080003ac  w    F .text	00000002 TIM1_CC_IRQHandler
+080003ac  w    F .text	00000002 DMA2_Stream5_IRQHandler
+080003ac  w    F .text	00000002 HardFault_Handler
+080003ac  w    F .text	00000002 DMA1_Stream5_IRQHandler
 00004000 g       *ABS*	00000000 _Min_Stack_Size
-080003a8  w    F .text	00000002 SysTick_Handler
-080003a8  w    F .text	00000002 PVD_IRQHandler
-080003a8  w    F .text	00000002 SDIO_IRQHandler
-080003a8  w    F .text	00000002 TAMP_STAMP_IRQHandler
-080003e8 g       *ABS*	00000000 _sidata
-080003a8  w    F .text	00000002 PendSV_Handler
-080003a8  w    F .text	00000002 NMI_Handler
-080003dc g       .init_array	00000000 __exidx_end
-080003a8  w    F .text	00000002 EXTI3_IRQHandler
-080003a8  w    F .text	00000002 TIM1_UP_TIM10_IRQHandler
-080003d8 g       .text	00000000 _etext
+080003ac  w    F .text	00000002 SysTick_Handler
+080003ac  w    F .text	00000002 PVD_IRQHandler
+080003ac  w    F .text	00000002 SDIO_IRQHandler
+080003ac  w    F .text	00000002 TAMP_STAMP_IRQHandler
+080003ec g       *ABS*	00000000 _sidata
+080003ac  w    F .text	00000002 PendSV_Handler
+080003ac  w    F .text	00000002 NMI_Handler
+080003e0 g       .init_array	00000000 __exidx_end
+080003ac  w    F .text	00000002 EXTI3_IRQHandler
+080003ac  w    F .text	00000002 TIM1_UP_TIM10_IRQHandler
+080003dc g       .text	00000000 _etext
 20000430 g       .bss	00000000 _sbss
-080003a8  w    F .text	00000002 I2C3_ER_IRQHandler
+080003ac  w    F .text	00000002 I2C3_ER_IRQHandler
 20000430 g     O .data	00000000 .hidden __TMC_END__
-080003a8  w    F .text	00000002 EXTI0_IRQHandler
-080003a8  w    F .text	00000002 I2C2_EV_IRQHandler
-080003a8  w    F .text	00000002 DMA1_Stream2_IRQHandler
-080003a8  w    F .text	00000002 FPU_IRQHandler
-080003a8  w    F .text	00000002 UsageFault_Handler
-080003a8  w    F .text	00000002 DMA2_Stream2_IRQHandler
+080003ac  w    F .text	00000002 EXTI0_IRQHandler
+080003ac  w    F .text	00000002 I2C2_EV_IRQHandler
+080003ac  w    F .text	00000002 DMA1_Stream2_IRQHandler
+080003ac  w    F .text	00000002 FPU_IRQHandler
+080003ac  w    F .text	00000002 UsageFault_Handler
+080003ac  w    F .text	00000002 DMA2_Stream2_IRQHandler
 20000430 g       .bss	00000000 __bss_start__
 20000000 g       .data	00000000 _sdata
-080003a8  w    F .text	00000002 SPI1_IRQHandler
-080003a8  w    F .text	00000002 TIM1_BRK_TIM9_IRQHandler
-080003dc g       .init_array	00000000 __exidx_start
-080003a8  w    F .text	00000002 DMA2_Stream3_IRQHandler
-080003d8 g     O .rodata	00000004 _global_impure_ptr
+080003ac  w    F .text	00000002 SPI1_IRQHandler
+080003ac  w    F .text	00000002 TIM1_BRK_TIM9_IRQHandler
+080003e0 g       .init_array	00000000 __exidx_start
+080003ac  w    F .text	00000002 DMA2_Stream3_IRQHandler
+080003dc g     O .rodata	00000004 _global_impure_ptr
 08000254 g     F .text	00000048 __libc_init_array
-080003a8  w    F .text	00000002 USART6_IRQHandler
-080003c0 g     F .text	00000000 _init
+080003ac  w    F .text	00000002 USART6_IRQHandler
+080003c4 g     F .text	00000000 _init
 08000228 g     F .text	0000002c __libc_fini_array
 2000044c g       .bss	00000000 _ebss
-08000358  w    F .text	00000038 Reset_Handler
-080003a8  w    F .text	00000002 DMA2_Stream0_IRQHandler
-080003a8  w    F .text	00000002 TIM4_IRQHandler
-080003a8  w    F .text	00000002 I2C1_EV_IRQHandler
-080003a8  w    F .text	00000002 DMA1_Stream6_IRQHandler
-080003a8  w    F .text	00000002 DMA1_Stream1_IRQHandler
+0800035c  w    F .text	00000038 Reset_Handler
+080003ac  w    F .text	00000002 DMA2_Stream0_IRQHandler
+080003ac  w    F .text	00000002 TIM4_IRQHandler
+080003ac  w    F .text	00000002 I2C1_EV_IRQHandler
+080003ac  w    F .text	00000002 DMA1_Stream6_IRQHandler
+080003ac  w    F .text	00000002 DMA1_Stream1_IRQHandler
 2000044c g       .bss	00000000 __bss_end__
-080003a8  w    F .text	00000002 TIM3_IRQHandler
-080003a8  w    F .text	00000002 RCC_IRQHandler
+08000358 g     F .text	00000002 TIM3_IRQHandler
+080003ac  w    F .text	00000002 RCC_IRQHandler
 00000000 g       *ABS*	00000000 _Min_Heap_Size
-080003a8 g       .text	00000002 Default_Handler
-080003a8  w    F .text	00000002 EXTI15_10_IRQHandler
+080003ac g       .text	00000002 Default_Handler
+080003ac  w    F .text	00000002 EXTI15_10_IRQHandler
 0800029c g     F .text	00000068 __register_exitproc
-080003a8  w    F .text	00000002 ADC_IRQHandler
-080003a8  w    F .text	00000002 DMA1_Stream7_IRQHandler
-080003a8  w    F .text	00000002 TIM5_IRQHandler
-080003a8  w    F .text	00000002 DMA2_Stream7_IRQHandler
-080003a8  w    F .text	00000002 I2C3_EV_IRQHandler
-080003a8  w    F .text	00000002 EXTI9_5_IRQHandler
-080003a8  w    F .text	00000002 RTC_WKUP_IRQHandler
-080003a8  w    F .text	00000002 SPI2_IRQHandler
-080003a8  w    F .text	00000002 MemManage_Handler
+080003ac  w    F .text	00000002 ADC_IRQHandler
+080003ac  w    F .text	00000002 DMA1_Stream7_IRQHandler
+080003ac  w    F .text	00000002 TIM5_IRQHandler
+080003ac  w    F .text	00000002 DMA2_Stream7_IRQHandler
+080003ac  w    F .text	00000002 I2C3_EV_IRQHandler
+080003ac  w    F .text	00000002 EXTI9_5_IRQHandler
+080003ac  w    F .text	00000002 RTC_WKUP_IRQHandler
+080003ac  w    F .text	00000002 SPI2_IRQHandler
+080003ac  w    F .text	00000002 MemManage_Handler
 08000304 g     F .text	00000004 main
-080003a8  w    F .text	00000002 DMA1_Stream0_IRQHandler
-080003a8  w    F .text	00000002 SVC_Handler
-080003a8  w    F .text	00000002 EXTI4_IRQHandler
+080003ac  w    F .text	00000002 DMA1_Stream0_IRQHandler
+080003ac  w    F .text	00000002 SVC_Handler
+080003ac  w    F .text	00000002 EXTI4_IRQHandler
 08000308 g     F .text	00000050 SystemInit
-080003cc g     F .text	00000000 _fini
+080003d0 g     F .text	00000000 _fini
 0800021c g     F .text	0000000c atexit
 20000000 g     O .data	00000004 _impure_ptr
-080003a8  w    F .text	00000002 WWDG_IRQHandler
-080003a8  w    F .text	00000002 TIM2_IRQHandler
-080003a8  w    F .text	00000002 OTG_FS_WKUP_IRQHandler
-080003a8  w    F .text	00000002 TIM1_TRG_COM_TIM11_IRQHandler
+080003ac  w    F .text	00000002 WWDG_IRQHandler
+080003ac  w    F .text	00000002 TIM2_IRQHandler
+080003ac  w    F .text	00000002 OTG_FS_WKUP_IRQHandler
+080003ac  w    F .text	00000002 TIM1_TRG_COM_TIM11_IRQHandler
 20010000 g       .isr_vector	00000000 _estack
-080003a8  w    F .text	00000002 EXTI1_IRQHandler
+080003ac  w    F .text	00000002 EXTI1_IRQHandler
 20000430 g       .data	00000000 _edata
-080003a8  w    F .text	00000002 USART2_IRQHandler
+080003ac  w    F .text	00000002 USART2_IRQHandler
 08000000 g     O .isr_vector	00000000 g_pfnVectors
-080003a8  w    F .text	00000002 I2C2_ER_IRQHandler
-080003a8  w    F .text	00000002 DMA2_Stream1_IRQHandler
-080003a8  w    F .text	00000002 FLASH_IRQHandler
-080003a8  w    F .text	00000002 DMA2_Stream4_IRQHandler
-080003a8  w    F .text	00000002 BusFault_Handler
-080003a8  w    F .text	00000002 USART1_IRQHandler
-080003a8  w    F .text	00000002 OTG_FS_IRQHandler
-080003a8  w    F .text	00000002 SPI3_IRQHandler
-080003a8  w    F .text	00000002 DMA1_Stream4_IRQHandler
-080003a8  w    F .text	00000002 I2C1_ER_IRQHandler
-080003a8  w    F .text	00000002 DMA2_Stream6_IRQHandler
-080003a8  w    F .text	00000002 DMA1_Stream3_IRQHandler
+080003ac  w    F .text	00000002 I2C2_ER_IRQHandler
+080003ac  w    F .text	00000002 DMA2_Stream1_IRQHandler
+080003ac  w    F .text	00000002 FLASH_IRQHandler
+080003ac  w    F .text	00000002 DMA2_Stream4_IRQHandler
+080003ac  w    F .text	00000002 BusFault_Handler
+080003ac  w    F .text	00000002 USART1_IRQHandler
+080003ac  w    F .text	00000002 OTG_FS_IRQHandler
+080003ac  w    F .text	00000002 SPI3_IRQHandler
+080003ac  w    F .text	00000002 DMA1_Stream4_IRQHandler
+080003ac  w    F .text	00000002 I2C1_ER_IRQHandler
+080003ac  w    F .text	00000002 DMA2_Stream6_IRQHandler
+080003ac  w    F .text	00000002 DMA1_Stream3_IRQHandler
 
 
 
@@ -195,7 +195,7 @@ Disassembly of section .text:
  80001ee:	bd10      	pop	{r4, pc}
  80001f0:	20000430 	.word	0x20000430
  80001f4:	00000000 	.word	0x00000000
- 80001f8:	080003c0 	.word	0x080003c0
+ 80001f8:	080003c4 	.word	0x080003c4
 
 080001fc <frame_dummy>:
  80001fc:	b508      	push	{r3, lr}
@@ -208,7 +208,7 @@ Disassembly of section .text:
  800020e:	e7cf      	b.n	80001b0 <register_tm_clones>
  8000210:	00000000 	.word	0x00000000
  8000214:	20000434 	.word	0x20000434
- 8000218:	080003c0 	.word	0x080003c0
+ 8000218:	080003c4 	.word	0x080003c4
 
 0800021c <atexit>:
  800021c:	2300      	movs	r3, #0
@@ -232,9 +232,9 @@ Disassembly of section .text:
  8000240:	2c00      	cmp	r4, #0
  8000242:	d1f9      	bne.n	8000238 <__libc_fini_array+0x10>
  8000244:	e8bd 4038 	ldmia.w	sp!, {r3, r4, r5, lr}
- 8000248:	f000 b8c0 	b.w	80003cc <_fini>
- 800024c:	080003e8 	.word	0x080003e8
- 8000250:	080003e4 	.word	0x080003e4
+ 8000248:	f000 b8c2 	b.w	80003d0 <_fini>
+ 800024c:	080003ec 	.word	0x080003ec
+ 8000250:	080003e8 	.word	0x080003e8
 
 08000254 <__libc_init_array>:
  8000254:	b570      	push	{r4, r5, r6, lr}
@@ -252,7 +252,7 @@ Disassembly of section .text:
  800026e:	4e09      	ldr	r6, [pc, #36]	; (8000294 <__libc_init_array+0x40>)
  8000270:	4d09      	ldr	r5, [pc, #36]	; (8000298 <__libc_init_array+0x44>)
  8000272:	1b76      	subs	r6, r6, r5
- 8000274:	f000 f8a4 	bl	80003c0 <_init>
+ 8000274:	f000 f8a6 	bl	80003c4 <_init>
  8000278:	10b6      	asrs	r6, r6, #2
  800027a:	d006      	beq.n	800028a <__libc_init_array+0x36>
  800027c:	2400      	movs	r4, #0
@@ -262,10 +262,10 @@ Disassembly of section .text:
  8000286:	42a6      	cmp	r6, r4
  8000288:	d1f9      	bne.n	800027e <__libc_init_array+0x2a>
  800028a:	bd70      	pop	{r4, r5, r6, pc}
- 800028c:	080003dc 	.word	0x080003dc
- 8000290:	080003dc 	.word	0x080003dc
- 8000294:	080003e4 	.word	0x080003e4
- 8000298:	080003dc 	.word	0x080003dc
+ 800028c:	080003e0 	.word	0x080003e0
+ 8000290:	080003e0 	.word	0x080003e0
+ 8000294:	080003e8 	.word	0x080003e8
+ 8000298:	080003e0 	.word	0x080003e0
 
 0800029c <__register_exitproc>:
  800029c:	b470      	push	{r4, r5, r6}
@@ -303,7 +303,7 @@ Disassembly of section .text:
  80002f8:	e7d6      	b.n	80002a8 <__register_exitproc+0xc>
  80002fa:	f04f 30ff 	mov.w	r0, #4294967295	; 0xffffffff
  80002fe:	e7dd      	b.n	80002bc <__register_exitproc+0x20>
- 8000300:	080003d8 	.word	0x080003d8
+ 8000300:	080003dc 	.word	0x080003dc
 
 08000304 <main>:
  8000304:	2000      	movs	r0, #0
@@ -339,70 +339,74 @@ Disassembly of section .text:
  8000350:	40023800 	.word	0x40023800
  8000354:	24003010 	.word	0x24003010
 
-08000358 <Reset_Handler>:
- 8000358:	f8df d034 	ldr.w	sp, [pc, #52]	; 8000390 <LoopFillZerobss+0x14>
- 800035c:	2100      	movs	r1, #0
- 800035e:	e003      	b.n	8000368 <LoopCopyDataInit>
+08000358 <TIM3_IRQHandler>:
+ 8000358:	4770      	bx	lr
+ 800035a:	bf00      	nop
 
-08000360 <CopyDataInit>:
- 8000360:	4b0c      	ldr	r3, [pc, #48]	; (8000394 <LoopFillZerobss+0x18>)
- 8000362:	585b      	ldr	r3, [r3, r1]
- 8000364:	5043      	str	r3, [r0, r1]
- 8000366:	3104      	adds	r1, #4
+0800035c <Reset_Handler>:
+ 800035c:	f8df d034 	ldr.w	sp, [pc, #52]	; 8000394 <LoopFillZerobss+0x14>
+ 8000360:	2100      	movs	r1, #0
+ 8000362:	e003      	b.n	800036c <LoopCopyDataInit>
 
-08000368 <LoopCopyDataInit>:
- 8000368:	480b      	ldr	r0, [pc, #44]	; (8000398 <LoopFillZerobss+0x1c>)
- 800036a:	4b0c      	ldr	r3, [pc, #48]	; (800039c <LoopFillZerobss+0x20>)
- 800036c:	1842      	adds	r2, r0, r1
- 800036e:	429a      	cmp	r2, r3
- 8000370:	d3f6      	bcc.n	8000360 <CopyDataInit>
- 8000372:	4a0b      	ldr	r2, [pc, #44]	; (80003a0 <LoopFillZerobss+0x24>)
- 8000374:	e002      	b.n	800037c <LoopFillZerobss>
+08000364 <CopyDataInit>:
+ 8000364:	4b0c      	ldr	r3, [pc, #48]	; (8000398 <LoopFillZerobss+0x18>)
+ 8000366:	585b      	ldr	r3, [r3, r1]
+ 8000368:	5043      	str	r3, [r0, r1]
+ 800036a:	3104      	adds	r1, #4
 
-08000376 <FillZerobss>:
- 8000376:	2300      	movs	r3, #0
- 8000378:	f842 3b04 	str.w	r3, [r2], #4
+0800036c <LoopCopyDataInit>:
+ 800036c:	480b      	ldr	r0, [pc, #44]	; (800039c <LoopFillZerobss+0x1c>)
+ 800036e:	4b0c      	ldr	r3, [pc, #48]	; (80003a0 <LoopFillZerobss+0x20>)
+ 8000370:	1842      	adds	r2, r0, r1
+ 8000372:	429a      	cmp	r2, r3
+ 8000374:	d3f6      	bcc.n	8000364 <CopyDataInit>
+ 8000376:	4a0b      	ldr	r2, [pc, #44]	; (80003a4 <LoopFillZerobss+0x24>)
+ 8000378:	e002      	b.n	8000380 <LoopFillZerobss>
 
-0800037c <LoopFillZerobss>:
- 800037c:	4b09      	ldr	r3, [pc, #36]	; (80003a4 <LoopFillZerobss+0x28>)
- 800037e:	429a      	cmp	r2, r3
- 8000380:	d3f9      	bcc.n	8000376 <FillZerobss>
- 8000382:	f7ff ffc1 	bl	8000308 <SystemInit>
- 8000386:	f7ff ff65 	bl	8000254 <__libc_init_array>
- 800038a:	f7ff ffbb 	bl	8000304 <main>
- 800038e:	4770      	bx	lr
- 8000390:	20010000 	.word	0x20010000
- 8000394:	080003e8 	.word	0x080003e8
- 8000398:	20000000 	.word	0x20000000
- 800039c:	20000430 	.word	0x20000430
+0800037a <FillZerobss>:
+ 800037a:	2300      	movs	r3, #0
+ 800037c:	f842 3b04 	str.w	r3, [r2], #4
+
+08000380 <LoopFillZerobss>:
+ 8000380:	4b09      	ldr	r3, [pc, #36]	; (80003a8 <LoopFillZerobss+0x28>)
+ 8000382:	429a      	cmp	r2, r3
+ 8000384:	d3f9      	bcc.n	800037a <FillZerobss>
+ 8000386:	f7ff ffbf 	bl	8000308 <SystemInit>
+ 800038a:	f7ff ff63 	bl	8000254 <__libc_init_array>
+ 800038e:	f7ff ffb9 	bl	8000304 <main>
+ 8000392:	4770      	bx	lr
+ 8000394:	20010000 	.word	0x20010000
+ 8000398:	080003ec 	.word	0x080003ec
+ 800039c:	20000000 	.word	0x20000000
  80003a0:	20000430 	.word	0x20000430
- 80003a4:	2000044c 	.word	0x2000044c
+ 80003a4:	20000430 	.word	0x20000430
+ 80003a8:	2000044c 	.word	0x2000044c
 
-080003a8 <ADC_IRQHandler>:
- 80003a8:	e7fe      	b.n	80003a8 <ADC_IRQHandler>
+080003ac <ADC_IRQHandler>:
+ 80003ac:	e7fe      	b.n	80003ac <ADC_IRQHandler>
 	...
 
-080003ac <register_fini>:
- 80003ac:	4b02      	ldr	r3, [pc, #8]	; (80003b8 <register_fini+0xc>)
- 80003ae:	b113      	cbz	r3, 80003b6 <register_fini+0xa>
- 80003b0:	4802      	ldr	r0, [pc, #8]	; (80003bc <register_fini+0x10>)
- 80003b2:	f7ff bf33 	b.w	800021c <atexit>
- 80003b6:	4770      	bx	lr
- 80003b8:	00000000 	.word	0x00000000
- 80003bc:	08000229 	.word	0x08000229
+080003b0 <register_fini>:
+ 80003b0:	4b02      	ldr	r3, [pc, #8]	; (80003bc <register_fini+0xc>)
+ 80003b2:	b113      	cbz	r3, 80003ba <register_fini+0xa>
+ 80003b4:	4802      	ldr	r0, [pc, #8]	; (80003c0 <register_fini+0x10>)
+ 80003b6:	f7ff bf31 	b.w	800021c <atexit>
+ 80003ba:	4770      	bx	lr
+ 80003bc:	00000000 	.word	0x00000000
+ 80003c0:	08000229 	.word	0x08000229
 
-080003c0 <_init>:
- 80003c0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 80003c2:	bf00      	nop
- 80003c4:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 80003c6:	bc08      	pop	{r3}
- 80003c8:	469e      	mov	lr, r3
- 80003ca:	4770      	bx	lr
+080003c4 <_init>:
+ 80003c4:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80003c6:	bf00      	nop
+ 80003c8:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80003ca:	bc08      	pop	{r3}
+ 80003cc:	469e      	mov	lr, r3
+ 80003ce:	4770      	bx	lr
 
-080003cc <_fini>:
- 80003cc:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
- 80003ce:	bf00      	nop
- 80003d0:	bcf8      	pop	{r3, r4, r5, r6, r7}
- 80003d2:	bc08      	pop	{r3}
- 80003d4:	469e      	mov	lr, r3
- 80003d6:	4770      	bx	lr
+080003d0 <_fini>:
+ 80003d0:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 80003d2:	bf00      	nop
+ 80003d4:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 80003d6:	bc08      	pop	{r3}
+ 80003d8:	469e      	mov	lr, r3
+ 80003da:	4770      	bx	lr
