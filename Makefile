@@ -15,7 +15,7 @@ BUILD_DIR=build
 OPT=-O3 -g0 -flto
 SRC=$(SOURCE_DIR)/main.c 
 SRC+=$(SOURCE_DIR)/system_stm32f4xx.c
-SRC+=$(CORE_DIR)/timer.c
+SRC+=$(CORE_DIR)/timer.c $(CORE_DIR)/rcc.c
 ###################################################
 
 CSTANDARD = -std=c11
@@ -62,6 +62,8 @@ ROOT=$(shell pwd)
 
 OBJS = $(addprefix $(BUILD_DIR)/objs/,$(SRC:.c=.o))
 DEPS = $(addprefix $(BUILD_DIR)/deps/,$(SRC:.c=.d))
+DEPS += rcc.h
+OBJS += rcc.o
 
 
 ###################################################
@@ -76,8 +78,8 @@ $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
 	mkdir -p $(BUILD_DIR)/deps $(BUILD_DIR)/objs
 
-$(BUILD_DIR)/objs/%.o : src/%.c $(BUILD_DIR)
-	$(CC) $(CFLAGS) -c -o $@ $< -MMD -MF $(BUILD_DIR)/deps/$(*F).d
+$(BUILD_DIR)/objs/%.o : src/%.c $(BUILD_DIR) $(DEPS)
+	$(CC) $(OBJS) $(CFLAGS) -c -o $@ $< -MMD -MF $(BUILD_DIR)/deps/$(*F).d
 
 $(BUILD_DIR)/$(PROJECT).elf: $(SRC)
 	$(CC) $(CFLAGS) $(LDFLAGS) $^ -o $@ $(STARTUP_SCRIPT) 

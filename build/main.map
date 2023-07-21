@@ -37,12 +37,12 @@ Discarded input sections
  .debug_str     0x0000000000000000       0x98 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
  .ARM.attributes
                 0x0000000000000000       0x1c /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
- .text          0x0000000000000000        0x0 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
- .data          0x0000000000000000        0x0 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
- .bss           0x0000000000000000        0x0 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
- .text          0x0000000000000000       0x14 /tmp/ccaW9Ko7.o
- .data          0x0000000000000000        0x0 /tmp/ccaW9Ko7.o
- .bss           0x0000000000000000        0x0 /tmp/ccaW9Ko7.o
+ .text          0x0000000000000000        0x0 /tmp/main.elf.qALltR.ltrans0.ltrans.o
+ .data          0x0000000000000000        0x0 /tmp/main.elf.qALltR.ltrans0.ltrans.o
+ .bss           0x0000000000000000        0x0 /tmp/main.elf.qALltR.ltrans0.ltrans.o
+ .text          0x0000000000000000       0x14 /tmp/cc68ErW2.o
+ .data          0x0000000000000000        0x0 /tmp/cc68ErW2.o
+ .bss           0x0000000000000000        0x0 /tmp/cc68ErW2.o
  .data          0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-atexit.o)
  .bss           0x0000000000000000        0x0 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-atexit.o)
  .text          0x0000000000000000       0x20 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-exit.o)
@@ -105,11 +105,11 @@ Linker script and memory map
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crti.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/crt0.o
-LOAD /tmp/ccKPCLgC.o
-LOAD /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
-LOAD /tmp/ccU8FOTZ.o
-LOAD /tmp/ccXVg6Hb.o
-LOAD /tmp/ccaW9Ko7.o
+LOAD /tmp/ccAirSEK.o
+LOAD /tmp/main.elf.qALltR.ltrans0.ltrans.o
+LOAD /tmp/cc6zTXEC.o
+LOAD /tmp/ccalVhHM.o
+LOAD /tmp/cc68ErW2.o
 START GROUP
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
 LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a
@@ -124,7 +124,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
 .isr_vector     0x0000000008000000      0x194
                 0x0000000008000000                . = ALIGN (0x4)
  *(.isr_vector)
- .isr_vector    0x0000000008000000      0x194 /tmp/ccaW9Ko7.o
+ .isr_vector    0x0000000008000000      0x194 /tmp/cc68ErW2.o
                 0x0000000008000000                g_pfnVectors
                 0x0000000008000194                . = ALIGN (0x4)
 
@@ -142,19 +142,19 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
                 0x000000000800029c                __register_exitproc
  *(.text*)
  .text.startup.main
-                0x0000000008000304        0x4 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
+                0x0000000008000304        0x4 /tmp/main.elf.qALltR.ltrans0.ltrans.o
                 0x0000000008000304                main
  .text.SystemInit
-                0x0000000008000308       0x50 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
+                0x0000000008000308       0x50 /tmp/main.elf.qALltR.ltrans0.ltrans.o
                 0x0000000008000308                SystemInit
  .text.TIM3_IRQHandler
-                0x0000000008000358        0x4 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
+                0x0000000008000358        0x4 /tmp/main.elf.qALltR.ltrans0.ltrans.o
                 0x0000000008000358                TIM3_IRQHandler
  .text.Reset_Handler
-                0x000000000800035c       0x50 /tmp/ccaW9Ko7.o
+                0x000000000800035c       0x50 /tmp/cc68ErW2.o
                 0x000000000800035c                Reset_Handler
  .text.Default_Handler
-                0x00000000080003ac        0x2 /tmp/ccaW9Ko7.o
+                0x00000000080003ac        0x2 /tmp/cc68ErW2.o
                 0x00000000080003ac                RTC_Alarm_IRQHandler
                 0x00000000080003ac                EXTI2_IRQHandler
                 0x00000000080003ac                DebugMon_Handler
@@ -345,9 +345,9 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtn.o
  .ARM.attributes
                 0x000000000000001e       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  .ARM.attributes
-                0x0000000000000052       0x32 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
+                0x0000000000000052       0x32 /tmp/main.elf.qALltR.ltrans0.ltrans.o
  .ARM.attributes
-                0x0000000000000084       0x21 /tmp/ccaW9Ko7.o
+                0x0000000000000084       0x21 /tmp/cc68ErW2.o
  .ARM.attributes
                 0x00000000000000a5       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-atexit.o)
  .ARM.attributes
@@ -373,7 +373,7 @@ LOAD /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/libgcc.a
 .comment        0x0000000000000000       0x33
  .comment       0x0000000000000000       0x33 /usr/lib/gcc/arm-none-eabi/10.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                                          0x34 (size before relaxing)
- .comment       0x0000000000000033       0x34 /tmp/main.elf.UIMEpb.ltrans0.ltrans.o
+ .comment       0x0000000000000033       0x34 /tmp/main.elf.qALltR.ltrans0.ltrans.o
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-atexit.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-fini.o)
  .comment       0x0000000000000033       0x34 /usr/lib/gcc/arm-none-eabi/10.3.1/../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard/libg.a(lib_a-impure.o)

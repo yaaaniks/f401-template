@@ -20,7 +20,7 @@ SYMBOL TABLE:
 00000000 l    d  .debug_str	00000000 .debug_str
 00000000 l    d  .debug_frame	00000000 .debug_frame
 00000000 l    d  .debug_ranges	00000000 .debug_ranges
-00000000 l    df *ABS*	00000000 ccaW9Ko7.o
+00000000 l    df *ABS*	00000000 cc68ErW2.o
 0800036c l       .text	00000000 LoopCopyDataInit
 08000364 l       .text	00000000 CopyDataInit
 08000380 l       .text	00000000 LoopFillZerobss

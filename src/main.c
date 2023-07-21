@@ -1,8 +1,8 @@
-#include <stm32f4xx.h>
 #include "timer.h"
+#include "rcc.h"
 
 int main()
 {
-    timeStamp = 345;
+    RCC_Init();
     return 0;
 }
