@@ -1,8 +1,14 @@
 #include "timer.h"
 #include "rcc.h"
+#include "gpio.h"
 
-int main()
+void main(void)
 {
     RCC_Init();
-    return 0;
+    GPIO_Init();
+    SysTick_Init();
+    enablePeriphClock();
+    GPIOC->BSRRL |= GPIO_BSRR_BS_13; // Toggle pin 13
+    while(1) {
+    }
 }

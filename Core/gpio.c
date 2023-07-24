@@ -1,0 +1,13 @@
+#include "gpio.h"
+
+// TODO: configure LED1 and LED2
+
+#define LED1 
+#define LED2
+
+void GPIO_Init(void) {
+    GPIOC->MODER |= GPIO_MODER_MODER13_0;
+    GPIOC->OTYPER &= ~GPIO_OTYPER_OT_13;
+    GPIOC->OSPEEDR |= (GPIO_OSPEEDER_OSPEEDR13_0 | GPIO_OSPEEDER_OSPEEDR13_1);
+    GPIOC->PUPDR |= GPIO_PUPDR_PUPDR13_0;
+}
