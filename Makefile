@@ -176,7 +176,7 @@ ROOT=$(shell pwd)
 
 OBJS = $(addprefix $(BUILD_DIR)/objs/,$(SRC:.c=.o))
 DEPS = $(addprefix $(BUILD_DIR)/deps/,$(SRC:.c=.d))
-DEPS += rcc.h timer.h gpio.h
+# DEPS += rcc.h timer.h gpio.h
 OBJS += rcc.o timer.o gpio.o
 
 
@@ -184,7 +184,7 @@ OBJS += rcc.o timer.o gpio.o
 
 all: proj
 
--include $(DEPS)
+-include $(BUILD_DIR)/$(DEPS)
 
 proj: $(BUILD_DIR) $(BUILD_DIR)/$(PROJECT).elf
 

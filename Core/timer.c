@@ -1,16 +1,18 @@
 #include "timer.h"
 
-#define TIM3_DELAY  0xFFF
-#define F_CPU       84000000
-#define F_CPU_MHZ   F_CPU/1000000
+__IO uint32_t SysTick_CNT = 0;
 
-volatile uint32_t ticks;
+// TODO: configure RTC timer
 
-// TODO: configure system clock and RTC timer
-
-void SysTick_Init() {
+void SysTick_Init(void) {
     SystemCoreClockUpdate();
-    SysTick_Config(SystemCoreClock/10000); // set tick to every 1ms	
+    // SysTick->LOAD &= ~(SysTick_LOAD_RELOAD_Msk);
+    // SysTick->LOAD |= F_CPU/1000-1; 
+    // SysTick->VAL &= ~SysTick_VAL_CURRENT_Msk;
+    // SysTick->CTRL |= (SysTick_CTRL_CLKSOURCE_Msk |
+    //                   SysTick_CTRL_TICKINT_Msk   |
+    //                   SysTick_CTRL_ENABLE_Msk);                          
+    SysTick_Config(F_CPU/1000-1); // set tick to every 1ms	
 }
 
 void timerInit() {
@@ -22,12 +24,16 @@ void timerInit() {
 }
 
 void SysTick_Handler(void) {
-    ticks++;
+    if (SysTick_CNT > 0) SysTick_CNT--;
 }
 
-void delay_ms(int ms) {
-    uint32_t started = ticks;
-    while((ticks-started)<=ms); // rollover-safe (within limits)
+void delay_ms(uint32_t ms) {
+    SysTick_CNT = ms;
+    while(SysTick_CNT); // rollover-safe (within limits)
+}
+
+void delay_us(uint32_t us) {
+
 }
 
 void TIM3_IRQHandler() {

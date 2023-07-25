@@ -5,10 +5,13 @@
 void main(void)
 {
     RCC_Init();
-    GPIO_Init();
-    SysTick_Init();
     enablePeriphClock();
-    GPIOC->BSRRL |= GPIO_BSRR_BS_13; // Toggle pin 13
+    SysTick_Init();
+    GPIO_Init();
     while(1) {
+        delay_ms(500);
+        GPIOC->BSRRL |= GPIO_BSRR_BS_13;
+        delay_ms(500);
+        GPIOC->BSRRH |= GPIO_BSRR_BS_13;
     }
 }
